@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposive Images</title>
+</head>
+
+<style>
+    h1{
+        font-size:4vw;
+    }
+
+    .left{
+        background-color:greenyellow;
+        float: left;
+        padding: 20px;
+        width:20%;
+    }
+
+    .center{
+        background-color:antiquewhite;
+        float: left;
+        padding: 20px;
+        width: 50%;
+
+    }
+
+    .right{
+        background-color:greenyellow;
+        float: left;
+        padding: 20px;
+        width: 20%;
+    }
+
+    /*media query been used to add a break point after 800px*/
+    @media screen and (max-width:800px){
+        .left,.center,.right{
+            width:100%;
+        }
+    }
+
+    
+    
+    </style>
+
+
+
+
+<body>
+
+    <h1>Resposive Image</h1>
+    
+<picture>
+  <!--For screen size 300px wide or smaller-->
+  <source srcset="./images/children_SI.jpg" media="(max-width: 300px)">                
+  <!--For screen size 301px to 1920px wide or smaller-->
+  <source srcset="./images/children_LM.jpg" media="(max-width: 1920px)">
+  
+  <!--Fallback image and default src, MUST be last-->
+  <img src="./children_LM.jpg" alt="Children-together" style="width:100%;height: auto;">
+</picture>
+<section>
+    <div class="left">
+        <p>Left</p>
+    </div>
+    <div class="center">
+        <p>Center</p>
+    </div>
+    <div class="right">
+        <p>Right</p>
+    </div>
+</section>
+    
+    
+</body>
+</html>
